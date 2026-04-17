@@ -27,12 +27,12 @@ def show():
     st.markdown('<p class="subtitle">Sélectionne les questions pour ce mois-ci (max 5 recommandé)</p>', unsafe_allow_html=True)
 
     # Mot de passe admin simple
-    admin_pwd = st.text_input("🔒 Mot de passe admin", type="password")
-    if admin_pwd != st.secrets.get("ADMIN_PASSWORD", "admin123"):
-        if admin_pwd:
-            st.error("Mot de passe incorrect.")
-        st.info("Entrez le mot de passe admin pour accéder à cette page.")
-        return
+    #admin_pwd = st.text_input("🔒 Mot de passe admin", type="password")
+    #if admin_pwd != st.secrets.get("ADMIN_PASSWORD", "admin123"):
+    #    if admin_pwd:
+    #        st.error("Mot de passe incorrect.")
+    #    st.info("Entrez le mot de passe admin pour accéder à cette page.")
+     #   return
 
     supabase = get_supabase()
     period = get_current_period()
